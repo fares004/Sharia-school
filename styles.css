@@ -103,11 +103,15 @@ body{
     overflow: hidden;
 }
 .home{
-  max-width: 90%;
-  top: 5rem;
+  max-width: 80%;
+  top: 8rem;
   margin: 15px;
 }
-
+.home .home-content{
+  position: absolute;
+  top: 100%;
+  margin: 15px;
+}
 
 .navbar.active {
     display: flex;
