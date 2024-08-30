@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const iconXmark = document.querySelector('.fa-xmark');
 
   iconXmark.style.display = 'none';
+  navbar.style.display = 'none';
 
   function handleResize() {
       if (window.matchMedia("(max-width: 786px)").matches) {
