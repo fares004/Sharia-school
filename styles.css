@@ -77,20 +77,20 @@ body{
   margin: 0;
 }
 @media (max-width:786px){
-.navbar {
-    display: none; 
-    transition: max-height 0.9s ease-in;
+  .navbar {
+    display: none; /* إخفاء navbar بشكل افتراضي */
+    transition: max-height 1s ease-in-out;
     max-height: 0;
     overflow: hidden;
-   
+}
+
+.navbar.active {
+    display: flex;
+    max-height: 400px;
 }
 .header .logo{
  align-items: center;
 
-}
-.navbar.active {
-  display: block;
-  max-height: 400px;
 }
 .toggle-menu{
   position: relative;
