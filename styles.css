@@ -79,7 +79,7 @@ body{
 @media (max-width:786px){
   .navbar {
     display: none; /* إخفاء navbar بشكل افتراضي */
-    transition: max-height 0.9s ease-in;
+    transition: max-height 2s ease-in-out;
     max-height: 0;
     overflow: hidden;
 }

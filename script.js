@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
           
           setTimeout(() => {
               iconXmark.classList.remove('rotate-in');
-          }, 500);
+          }, 1800);
       } else {
           iconXmark.classList.add('rotate-in');
           
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
               iconBars.style.display = 'block';
               iconXmark.classList.remove('rotate-in');
               navbar.style.display = 'none'; // إخفاء navbar عند إغلاق القائمة
-          }, 500);
+          }, 1800);
       }
   });
 });
