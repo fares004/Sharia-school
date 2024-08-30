@@ -62,7 +62,7 @@ body{
 
 .header .navbar form{
   position: absolute;
-  left: 10rem;
+  left: 5rem;
  bottom: 10px;
 }
 .header .navbar form input{
@@ -177,7 +177,4 @@ body{
   header .navbar form{
    display: none;
 }
-
-
-
 }
