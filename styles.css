@@ -78,7 +78,7 @@ body{
 }
 @media (max-width:786px){
   .navbar {
-    display: none; /* إخفاء navbar بشكل افتراضي */
+    display: none;
     transition: max-height 2s ease-in-out;
     max-height: 0;
     overflow: hidden;
@@ -133,7 +133,7 @@ body{
 .header .navbar form{
  display: none;
 }
-/* أنيميشن دوران */
+
 @keyframes rotateIn {
   from {
     transform: rotate(0deg);
@@ -144,12 +144,12 @@ body{
 }
 
 .fa-xmark {
-  transition: transform 0.5s ease;
+  transition: transform 0.8s ease;
 }
 
-.rotate-in {
-  animation: rotateIn 0.5s forwards;
-}
+ .rotate-in {
+  animation: rotateIn 0.8s forwards;
+} 
 }
 
 @media (min-width:787px) and (max-width:1115px){

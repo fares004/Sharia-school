@@ -4,33 +4,27 @@ document.addEventListener('DOMContentLoaded', () => {
   const iconBars = document.querySelector('.fa-bars');
   const iconXmark = document.querySelector('.fa-xmark');
 
-  // إخفاء رمز الإغلاق في البداية
   iconXmark.style.display = 'none';
 
-  // تحقق من حجم الشاشة وتطبيق الفئة المناسبة
   function handleResize() {
       if (window.matchMedia("(max-width: 786px)").matches) {
-          // إذا كانت الشاشة صغيرة، تأكد من إخفاء الـ navbar بشكل افتراضي
           navbar.classList.remove('active');
           iconBars.style.display = 'block';
           iconXmark.style.display = 'none';
-          navbar.style.display = 'none'; // تأكد من إخفاء navbar
+          navbar.style.display = 'none'; 
       } else {
-          // على الشاشات الكبيرة، يمكن أن يكون navbar مرئيًا بشكل افتراضي
           navbar.classList.add('active');
           iconBars.style.display = 'none';
           iconXmark.style.display = 'none';
-          navbar.style.display = 'flex'; // تأكد من عرض navbar
+          navbar.style.display = 'flex'; 
       }
   }
 
-  // استدعاء الدالة عند تحميل الصفحة
-  handleResize();
 
-  // إضافة حدث تغيير حجم الشاشة
+  handleResize();
   window.addEventListener('resize', handleResize);
 
-  // إضافة حدث النقر على التبديل
+ 
   toggleMenu.addEventListener('click', function() {
       navbar.classList.toggle('active');
 
@@ -38,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
           iconXmark.classList.add('rotate-in');
           iconBars.style.display = 'none';
           iconXmark.style.display = 'block';
-          navbar.style.display = 'flex'; // عرض navbar عند النقر على القائمة
+          navbar.style.display = 'flex'; 
           
           setTimeout(() => {
               iconXmark.classList.remove('rotate-in');
@@ -50,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
               iconXmark.style.display = 'none';
               iconBars.style.display = 'block';
               iconXmark.classList.remove('rotate-in');
-              navbar.style.display = 'none'; // إخفاء navbar عند إغلاق القائمة
+              navbar.style.display = 'none';
           }, 1800);
       }
   });
