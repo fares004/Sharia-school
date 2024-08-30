@@ -27,6 +27,7 @@ body{
   justify-content: right;
   align-items: center;
 }
+
 @media (min-width:786px){
 .header .toggle-menu{
     display: none;
