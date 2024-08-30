@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
         navbar.classList.remove('active');
         iconBars.style.display = 'block';
         iconXmark.style.display = 'none';
+        navbar.style.display ='flix';
       } else {
         // على الشاشات الكبيرة، يمكن أن يكون navbar مرئيًا بشكل افتراضي
         navbar.classList.add('active');
