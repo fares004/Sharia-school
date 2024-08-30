@@ -1,0 +1,182 @@
+/*IMPORT FONTS*/
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+:root{
+    --main--color: #632443;
+    --bg--color:#f5f5f5;
+    --text-color:#fff;
+    --text-font-family: "Cairo", sans-serif;
+}
+body{
+  background-color: var(--bg--color);
+}
+
+.header{
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 4rem;
+  background-color: var(--main--color);
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+@media (min-width:786px){
+.header .toggle-menu{
+    display: none;
+  }
+}
+
+.logo{
+  position: relative;
+  align-items: center;
+  color: var(--text-color);
+  margin:1.5rem 0.8rem 1.5rem;
+  font-size: 1.8rem;
+  font-family: var(--text-font-family);
+  font-weight: 700;
+}
+.navbar a{
+  color: var(--text-color);
+  margin-right: 1.2rem;
+  font-size: 1.2rem;
+  font-family: var(--text-font-family);
+  transition: .8s ease-out;
+}
+
+.navbar a:hover,
+.navbar a.active{
+   background-color: var(--bg--color);
+   color: var(--main--color);
+   border-radius: 5px;
+   padding: 5px 8px;
+   font-weight: 700;
+}
+
+.header .navbar form{
+  position: absolute;
+  left: 10rem;
+ bottom: 10px;
+}
+.header .navbar form input{
+  height: 40px;
+  width: 200px;
+  border-radius: 10px;
+}
+.btn-search:hover{
+  padding: 5px !important;
+  margin: 0;
+}
+@media (max-width:786px){
+.navbar {
+    display: none;
+    transition: max-height 0.9s ease-in;
+    max-height: 0;
+    overflow: hidden;
+}
+.header .logo{
+ align-items: center;
+
+}
+.navbar.active {
+  display: block;
+  max-height: 400px;
+}
+.toggle-menu{
+  position: relative;
+  color: var(--bg--color);
+  right: 10px;
+  font-size:1.5rem;
+}
+.header .logo {
+  position: absolute;
+  top: -15px;
+  right: calc(40% - 35px);
+  align-items: center;
+  font-size: 20px;
+}
+.header .navbar{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 100%;
+  background-color: var(--main--color);
+  border-bottom: 1px solid black;
+}
+
+
+.header .navbar a {
+  padding: 5px 10px;
+  margin: 1px 10px;
+  width: calc(100% - 20px);
+  font-size: 15px;
+}
+
+.header .navbar a:nth-last-child(2){
+  margin-bottom: 10px;
+}
+.header .navbar form{
+ display: none;
+}
+/* أنيميشن دوران */
+@keyframes rotateIn {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+.fa-xmark {
+  transition: transform 0.5s ease;
+}
+
+.rotate-in {
+  animation: rotateIn 0.5s forwards;
+}
+}
+
+@media (min-width:787px) and (max-width:1115px){
+  .header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 4rem;
+    background-color: var(--main--color);
+    display: flex;
+    justify-content: right;
+    align-items: center;
+  }
+
+  .logo{
+    margin:1rem 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  .navbar a{
+    color: var(--text-color);
+    margin-right: 1rem;
+    font-size: 1rem;
+    font-family: var(--text-font-family);
+    transition: .8s ease-out;
+  }
+  header .navbar form{
+   display: none;
+}
+
+
+
+}
