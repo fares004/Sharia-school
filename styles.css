@@ -17,7 +17,7 @@ body{
 }
 
 .header{
-  position: fixed;
+  position:fixed;
   top: 0;
   right: 0;
   width: 100%;
@@ -26,6 +26,8 @@ body{
   display: flex;
   justify-content: right;
   align-items: center;
+  z-index: 1000;
+
 }
 
 @media (min-width:786px){
@@ -76,6 +78,23 @@ body{
   padding: 5px !important;
   margin: 0;
 }
+.home{
+  position: relative;
+  top: 5rem;
+  right: 10px;
+  font-family: var(--text-font-family);
+  line-height: 40px;
+}
+.home h1{
+  margin-bottom: 10px;
+}
+.home .home-content p{
+  font-family: 800;
+  
+}
+.home ul{
+  list-style-type: none;
+}
 @media (max-width:786px){
   .navbar {
     display: none;
@@ -83,6 +102,12 @@ body{
     max-height: 0;
     overflow: hidden;
 }
+.home{
+  max-width: 90%;
+  top: 5rem;
+  margin: 15px;
+}
+
 
 .navbar.active {
     display: flex;
@@ -181,4 +206,5 @@ body{
   header .navbar form{
    display: none;
 }
+
 }
