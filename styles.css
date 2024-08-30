@@ -103,9 +103,10 @@ body{
     overflow: hidden;
 }
 .home{
+  position: relative;
   max-width: 80%;
-  top: 8rem;
-  margin: 15px;
+  top: 10rem;
+  margin: 20px;
 }
 .home .home-content{
   position: absolute;
