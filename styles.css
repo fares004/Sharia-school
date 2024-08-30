@@ -76,7 +76,7 @@ body{
 }
 @media (max-width:786px){
 .navbar {
-    display: none;
+    /* display: none; */
     transition: max-height 0.9s ease-in;
     max-height: 0;
     overflow: hidden;
