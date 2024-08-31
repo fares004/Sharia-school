@@ -174,8 +174,114 @@
       <p>محمد بن عبد الرحمن العريفي (16 يوليو 1970 -) داعية إسلامي سعودي، وأستاذ مساعد في كلية المعلمين بجامعة الملك سعود وحاصل على شهادة الدكتوراه في العقيدة والمذاهب المعاصرة.</p>
   </div>
     </div>
-
  </section>
+<!--End Teaching staff-->
+ <!-------------------------------------->
+<!--Start Login-->
+     <section class="login" id="login">
+      <div class="login-container">
+        <h2>تسجيل الدخول</h2>
+        <div class="role-select">
+            <label>
+                <input type="radio" name="role" value="student" checked> طالب
+            </label>
+            <label>
+                <input type="radio" name="role" value="teacher"> مدرس
+            </label>
+        </div>
+        <div class="input-container">
+            <i class="fa fa-user icon"></i>
+            <input type="text" id="username" placeholder="اسم المستخدم">
+        </div>
+        
+        <div class="input-container">
+            <i class="fa fa-lock icon"></i>
+            <input type="password" id="password" placeholder="كلمة المرور">
+        </div>
+        
+        <button class="btn" onclick="login()">تسجيل الدخول</button>
+        
+        <div class="link">
+            <a href="#login" onclick="showRegisterForm()">إنشاء حساب جديد</a>
+        </div>
+    </div>
+
+    <div class="register-container" style="display: none;">
+        <h2>إنشاء حساب جديد</h2>
+        
+        <div class="role-select">
+            <label>
+                <input type="radio" name="register-role" value="student" checked onchange="toggleForm()"> طالب
+            </label>
+            <label>
+                <input type="radio" name="register-role" value="teacher" onchange="toggleForm()"> مدرس
+            </label>
+        </div>
+        
+        <div id="student-form">
+            <div class="input-container">
+                <i class="fa fa-user icon"></i>
+                <input type="text" placeholder="الاسم الكامل">
+            </div>
+            <div class="input-container">
+              <i class="fa fa-user icon"></i>
+              <input type="text" placeholder="اسم الأب">
+             </div>
+             <div class="input-container">
+            <i class="fa fa-location-dot icon"></i>
+            <input type="text" placeholder="عنوان السكن">
+           </div>
+           <div class="input-container">
+          <i class="fa fa-phone icon"></i>
+          <input type="text" placeholder="رقم الهاتف">
+           </div>
+            <div class="input-container">
+                <i class="fa fa-envelope icon"></i>
+                <input type="email" placeholder="البريد الإلكتروني">
+            </div>
+            <div class="input-container">
+                <i class="fa fa-calendar icon"></i>
+                <input type="date" placeholder="تاريخ الميلاد">
+            </div>
+            <div class="input-container">
+                <i class="fa fa-graduation-cap icon"></i>
+                <input type="text" placeholder="الصف الدراسي">
+            </div>
+        </div>
+
+        <div id="teacher-form" style="display: none;">
+            <div class="input-container">
+                <i class="fa fa-user icon"></i>
+                <input type="text" placeholder="الاسم الكامل">
+            </div>
+            <div class="input-container">
+              <i class="fa fa-calendar icon"></i>
+              <input type="date" placeholder="تاريخ الميلاد">
+          </div>
+            <div class="input-container">
+                <i class="fa fa-envelope icon"></i>
+                <input type="email" placeholder="البريد الإلكتروني">
+            </div>
+            <div class="input-container">
+                <i class="fa fa-phone icon"></i>
+                <input type="text" placeholder="رقم الهاتف">
+            </div>
+            <div class="input-container">
+                <i class="fa fa-briefcase icon"></i>
+                <input type="text" placeholder="التخصص">
+            </div>
+            <div class="input-container">
+              <i class="fa fa-regular fa-calendar-plus icon"></i>
+              <input type="number" placeholder="سنوات الخبرة">
+          </div>
+        </div>
+        
+        <button class="btn">إنشاء الحساب</button>
+        <div class="link">
+            <a href="#login" onclick="showLoginForm()">العودة إلى تسجيل الدخول</a>
+        </div>
+    </div>
+     </section>
   <script src="./script.js"></script>
   <script src="https://kit.fontawesome.com/b27ed5dc12.js" crossorigin="anonymous"></script>
 </body>
