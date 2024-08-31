@@ -107,6 +107,45 @@ body{
 }
 
 @media (max-width:480px){
+  .home-content {
+    padding: 20px;
+    background-color: var(--bg--color);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .home-content h1 {
+    font-size: 22px;
+    color: var(--main--color);
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .home-content p {
+    font-size: 16px;
+    color: #000;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    text-align: justify;
+  }
+
+  .home-content ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 15px;
+  }
+
+  .home-content ul li {
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+  }
+
+  .home-content ul li:last-child {
+    margin-bottom: 0;
+  }
 .home form{
  width: 100%;
  left: 0;
@@ -118,7 +157,9 @@ margin: 10px 15px;
 .home form label input {
   width: 280px;
 }
-
+.home form label a {
+  padding: 5px 30px;
+}
 } 
 
 @media (max-width:786px){
