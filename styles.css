@@ -107,21 +107,24 @@ body{
   list-style-type: none;
 }
 
+@media (max-width:480px){
+ 
+.home form{
+ width: 100%;
+ left: 0;
+}
+.home form label{
+margin: 10px 15px;
+}
+
+}
+
 @media (max-width:786px){
 .navbar {
     display: none;
     transition: max-height 2s ease-in-out;
     max-height: 0;
     overflow: hidden;
-}
-.home{
-  position: relative;
-  max-width: 90%;
-  top: 5rem;
-
-}
-.home form{
-  left: -10px;
 }
 
 .home form label input{
