@@ -50,3 +50,15 @@ document.addEventListener('DOMContentLoaded', () => {
       }
   });
 });
+//  function checBoxes(){
+//     const tiggerBottom = window.innerHeight / 5 * 4;
+//     const boxes = document.querySelectorAll('.box');
+//     boxes.forEach((box ,idX) => {
+//         const boxTop = box.getBoundingClientRect().top;
+//         if(boxTop < tiggerBottom){
+//             box.classList.add('active');
+//         }else{
+//             box.classList.remove('active');
+//         }
+//     });
+//  }

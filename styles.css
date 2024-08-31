@@ -30,8 +30,7 @@ h1, h2 {
   display: flex;
   justify-content: right;
   align-items: center;
-  z-index: 1000;
-
+  z-index: 100; 
 }
 
 .home form{
@@ -136,7 +135,64 @@ strong{
 .level h2 {
   margin-bottom: 15px;
 }
+/*Start Teaching staff style*/
+.Tstaff{
+  position: relative;
+  top: 8rem;
+  right: 0;
+}
+.Tstaff h1{
+  margin: 0 0 20px;
+  font-family: var(--text-font-family);
+  font-weight: 800;
+  text-align: center;
+}
+.teachers-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  
+}
 
+.teacher-card {
+  flex: 1 1 30%;
+  margin: 10px;
+  background-color: #fff;
+  border: 1px solid #e1e1e1;
+  border-radius: 8px;
+  width: 250px;
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.teacher-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.teacher-img {
+  width: calc(100% - 10px);
+  height: 200px;
+  margin: 5px;
+  border-radius: 5px;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.teacher-card h2 {
+  color: var(--main--color);
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.teacher-card p {
+  color: #000;
+  font-size: 14px;
+  font-family: var(--text-font-family);
+  line-height: 30px;
+  font-weight: 700;
+}
 @media (min-width:786px){
 .header .toggle-menu{
     display: none;
@@ -278,6 +334,23 @@ margin: 10px 25px;
 .Edu-pro .Edu-pro-content .level ul{
   font-size: 14px;
 }
+.Tstaff{
+  top: 15rem;
+}
+
+.teachers-container{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.teacher-card {
+  flex: 1 1 50%;
+  width: 350px;
+}
+
 }
 
 
@@ -395,6 +468,20 @@ margin: 10px 25px;
   font-size: 0.9rem;
   padding-left: 15px;
 }
+.teacher-card {
+  flex: 1 1 35%;
+}
+.teachers-container{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+}
+
+.teacher-card {
+  flex: 1 1 35%;
+  width: 350px;
+}
 } 
 
 
@@ -426,3 +513,4 @@ margin: 10px 25px;
   }
 
 }
+
