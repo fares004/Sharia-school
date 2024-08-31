@@ -95,15 +95,50 @@ body{
   font-family: var(--text-font-family);
   line-height: 40px;
 }
+.home .home-content{
+  padding: 20px;
+  background-color: var(--bg--color);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 .home h1{
   margin-bottom: 10px;
+  color: var(--main--color);
+  font-family: 800;
+}
+
+.home img{
+  max-width: 500px;
+  height: auto;
+  border-radius: 5px;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 20px 10px;
+  float: left;
 }
 .home .home-content p{
-  font-family: 800;
-  
+  font-family: 600;
+  color: #000;
+  line-height: 40px;
+  margin-bottom: 15px;
+  text-align: start;
 }
-.home ul{
+.home-content ul {
   list-style-type: none;
+  padding: 0;
+  margin-bottom: 15px;
+}
+
+.home-content ul li {
+  font-size: 16px;
+  color: #000;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.home-content ul li:last-child {
+  margin-bottom: 0;
 }
 
 @media (max-width:480px){
@@ -134,24 +169,6 @@ body{
     margin-bottom: 15px;
     text-align: justify;
   }
-
-  .home-content ul {
-    list-style-type: none;
-    padding: 0;
-    margin-bottom: 15px;
-  }
-
-  .home-content ul li {
-    font-size: 16px;
-    color: #000;
-    margin-bottom: 10px;
-    padding-left: 20px;
-    position: relative;
-  }
-
-  .home-content ul li:last-child {
-    margin-bottom: 0;
-  }
 .home form{
  width: 100%;
  left: 0;
@@ -165,8 +182,8 @@ margin: 10px 25px;
 }
 .home form label a {
   padding: 5px 30px;
-  background-color: var(--main--color);
-  color: var(--text-color);
+  background-color: var(--main--color) !important;
+  color: var(--text-color) !important;
   font-family: 800;
 }
 } 
@@ -183,6 +200,13 @@ margin: 10px 25px;
   position: absolute;
   top: 2rem;
   margin: 15px;
+}
+.home-content img{
+  max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .navbar.active {
@@ -231,9 +255,23 @@ margin: 10px 25px;
 .header .navbar a:nth-last-child(2){
   margin-bottom: 10px;
 }
-.header .navbar form{
- display: none;
-}
+.home form{
+  width: 100%;
+  left: 0;
+ }
+ .home form label{
+ margin: 10px 25px;
+ }
+ 
+ .home form label input {
+   width: 250px;
+ }
+ .home form label a {
+   padding: 5px 30px;
+   background-color: var(--main--color) !important;
+   color: var(--text-color) !important;
+   font-family: 800;
+ }
 
 @keyframes rotateIn {
   from {
