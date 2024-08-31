@@ -439,6 +439,7 @@ margin: 10px 25px;
 }
 .Edu-pro{
   top: 15rem;
+  margin-bottom: 20px;
 }
 .Edu-pro h1{
   font-size: 18px;
@@ -451,6 +452,7 @@ margin: 10px 25px;
 }
 .Tstaff{
   top: 15rem;
+  margin-bottom: 20px;
 }
 
 .teachers-container{
@@ -467,7 +469,8 @@ margin: 10px 25px;
 }
 
 .login{
- margin-top: 25px;
+ margin-top: 35px;
+ top: 20rem;
 }
 .login-container, #student-form, #teacher-form {
   width: 95%;
