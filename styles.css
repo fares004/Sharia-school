@@ -128,8 +128,14 @@ strong{
   background-color: var(--section-bg-color);
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border: 1px solid var(--section-border-color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.level:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .level h2 {
@@ -157,7 +163,7 @@ strong{
 .teacher-card {
   flex: 1 1 30%;
   margin: 10px;
-  background-color: #fff;
+  background-color: var(--bg--color);
   border: 1px solid #e1e1e1;
   border-radius: 8px;
   width: 250px;
