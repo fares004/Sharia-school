@@ -29,7 +29,10 @@ body{
   z-index: 1000;
 
 }
-
+.header .navbar form{
+  position: relative;
+  left: 0;
+}
 @media (min-width:786px){
 .header .toggle-menu{
     display: none;
@@ -61,23 +64,6 @@ body{
    padding: 5px 8px;
    font-weight: 700;
 }
-
-.header .navbar form{
-  position: absolute;
- left: 0;
- bottom: 10px;
- display: none;
-}
-
-.header .navbar form input{
-  height: 40px;
-  width: 200px;
-  border-radius: 10px;
-}
-.btn-search:hover{
-  padding: 5px !important;
-  margin: 0;
-}
 .home{
   position: relative;
   top: 5rem;
@@ -95,8 +81,42 @@ body{
 .home ul{
   list-style-type: none;
 }
+
+.home form{
+  position: absolute;
+  left: 5rem;
+  top: 0;
+}
+.home form label{
+  width: 100%;
+  padding: 10px 20px;
+  margin: 5px;
+}
+.home form label input{
+  height: 40px;
+  padding: 10px;
+  margin-left: 10px;
+  border-radius: 4px;
+}
+.home form label a{
+  background-color: var(--bg--color);
+  padding: 5px 15px;
+  color: var(--main--color);
+  border-radius: 2px; 
+  transition: background-size 0.8s ease, color 0.8s ease;
+  background-size: 0% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(90deg, var(--main--color) 0%, var(--main--color) 100%);
+}
+
+.home form label a:hover{
+  background-size: 100% 100%;
+  color: var(--text-color);
+}
+
 @media (max-width:786px){
-  .navbar {
+.navbar {
     display: none;
     transition: max-height 2s ease-in-out;
     max-height: 0;
@@ -104,13 +124,18 @@ body{
 }
 .home{
   position: relative;
-  max-width: 80%;
-  top: 10rem;
-  margin: 20px;
+  max-width: 90%;
+  top: 5rem;
+
+}
+
+.home form label input{
+  max-width: 50%;
+ 
 }
 .home .home-content{
   position: absolute;
-  top: 100%;
+  top: 5rem;
   margin: 15px;
 }
 
@@ -208,8 +233,5 @@ body{
     font-family: var(--text-font-family);
     transition: .8s ease-out;
   }
-  header .navbar form{
-   display: none;
-}
 
 }
