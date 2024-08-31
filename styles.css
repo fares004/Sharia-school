@@ -92,7 +92,6 @@ body{
 .home{
   position: relative;
   top: 5rem;
-  right: 10px;
   font-family: var(--text-font-family);
   line-height: 40px;
 }
@@ -108,7 +107,6 @@ body{
 }
 
 @media (max-width:480px){
- 
 .home form{
  width: 100%;
  left: 0;
@@ -117,7 +115,11 @@ body{
 margin: 10px 15px;
 }
 
+.home form label input {
+  width: 280px;
 }
+
+} 
 
 @media (max-width:786px){
 .navbar {
@@ -127,13 +129,9 @@ margin: 10px 15px;
     overflow: hidden;
 }
 
-.home form label input{
-  max-width: 50%;
- 
-}
 .home .home-content{
   position: absolute;
-  top: 5rem;
+  top: 2rem;
   margin: 15px;
 }
 
