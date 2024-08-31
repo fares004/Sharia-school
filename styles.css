@@ -16,6 +16,10 @@ body{
   background-color: var(--bg--color);
 }
 
+h1, h2 {
+  color: var(--main--color);
+  font-family: var(--text-font-family);
+}
 .header{
   position:fixed;
   top: 0;
@@ -29,6 +33,7 @@ body{
   z-index: 1000;
 
 }
+
 .home form{
   position: absolute;
   left: 5rem;
@@ -56,6 +61,80 @@ body{
 .home form label a:hover{
   background-size: 100% 100%;
   color: var(--text-color);
+}
+
+/*Start with tutorial style*/
+/* General Styles */
+.Edu-pro {
+  position: relative;
+  top: 8rem;
+  right: 0;
+  background-color: var(--bg--color);
+  padding: 20px; /* Add padding for spacing */
+}
+
+.Edu-pro h1 {
+  margin: 0 0 20px;
+  font-family: var(--text-font-family);
+  font-weight: 800;
+  text-align: center;
+}
+
+.Edu-pro-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; 
+}
+
+.level {
+  background-color: var(--bg--color);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--section-border-color);
+}
+
+.level h2 {
+  margin-bottom: 15px;
+}
+
+.level ul {
+  list-style-type: none;
+  padding-left: 0;
+  font-family: var(--text-font-family);
+  font-weight: 700;
+}
+
+.level ul li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #000;
+  padding-right: 20px;
+  position: relative;
+}
+
+.level ul li::before {
+  content: " •";
+  color: var(--main--color);
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+strong{
+  color: var(--main--color);
+}
+.level {
+  margin-bottom: 30px;
+  background-color: var(--section-bg-color);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--section-border-color);
+}
+
+.level h2 {
+  margin-bottom: 15px;
 }
 
 @media (min-width:786px){
@@ -141,6 +220,7 @@ body{
   margin-bottom: 0;
 }
 
+
 @media (max-width:480px){
   .home-content {
     padding: 20px;
@@ -186,7 +266,20 @@ margin: 10px 25px;
   color: var(--text-color) !important;
   font-family: 800;
 }
-} 
+.Edu-pro{
+  top: 15rem;
+}
+.Edu-pro h1{
+  font-size: 18px;
+}
+.Edu-pro .Edu-pro-content .level h2{
+  font-size: 16px;
+}
+.Edu-pro .Edu-pro-content .level ul{
+  font-size: 14px;
+}
+}
+
 
 @media (max-width:786px){
 .navbar {
@@ -197,8 +290,8 @@ margin: 10px 25px;
 }
 
 .home .home-content{
-  position: absolute;
-  top: 2rem;
+  position: relative;
+  top: 7rem;
   margin: 15px;
 }
 .home-content img{
@@ -264,10 +357,10 @@ margin: 10px 25px;
  }
  
  .home form label input {
-   width: 250px;
+   width: 221px;
  }
  .home form label a {
-   padding: 5px 30px;
+   padding: 5px 25px;
    background-color: var(--main--color) !important;
    color: var(--text-color) !important;
    font-family: 800;
@@ -288,8 +381,22 @@ margin: 10px 25px;
 
  .rotate-in {
   animation: rotateIn 0.8s forwards;
-} 
 }
+.level {
+  padding: 15px;
+  border-radius: 6px;
+}
+
+.level h2 {
+  font-size: 1.3rem;
+}
+
+.level ul li {
+  font-size: 0.9rem;
+  padding-left: 15px;
+}
+} 
+
 
 @media (min-width:787px) and (max-width:1115px){
   .header{
