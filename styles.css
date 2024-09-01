@@ -573,7 +573,14 @@ margin: 10px 25px;
   right: 6rem;
 }
 .Welcome-message{
-  text-align: justify;
+  text-align: center;
+}
+.contact-info h2 {
+ text-align: center;
+}
+.contact-info p{
+  text-align: right;
+  margin: 10px 0;
 }
 }
 
