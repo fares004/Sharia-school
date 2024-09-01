@@ -210,7 +210,7 @@ strong{
   align-items: center;
 }
 
-.login-container, #student-form, #teacher-form {
+.login-container ,.Create-an-account-container, #student-form, #teacher-form {
   position: relative;
   background-color: var(--bg--color);
   padding: 20px;
@@ -274,23 +274,30 @@ strong{
   margin-right: 5px;
 }
 
-.btn {
-  position: relative;
-  width: 50%;
-  right: 15.5rem;
-  padding: 10px;
-  background-color: var(--main--color);
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
-  font-family: var(--text-font-family);
-  margin-top: 10px;
-}
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 15px;
+} 
+
+
+  .btn {
+    padding: 10px 20px;
+    background-color: var(--main--color);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: var(--text-font-family);
+    margin-top: 10px;
+  }
+
 
 .btn:hover {
-  background-color: #4f1c34; 
+  background-color: #500c2f;; 
 }
 
 .link {
@@ -307,7 +314,88 @@ strong{
 .link a:hover {
   text-decoration: underline;
 }
+/*Start Contact us*/
+.contactUs{
+  position: relative;
+  top: 20rem;
+  right: 0;
+}
+.contact-info, .contact-form, .map {
+  position: relative;
+  background-color: var(--bg--color);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  margin: 25px auto; 
+  right: 0;
+  
+}
+.contactUs h1{
+  margin:  20px;
+  font-family: var(--text-font-family);
+  font-weight: 800;
+  text-align: center;
+}
+.Welcome-message{
+  color: #000;
+  margin: 20px;
+  font-family: var(--text-font-family);
+  font-weight: 800;
+  text-align: center;
+}
+.contact-info h2, .contact-form h2, .map h2 {
+  color: var(--main--color);
+  margin-bottom: 15px;
+}
+.contact-info p{
+  color: #000;
+  margin: 20px 40px;
+  font-family: var(--text-font-family);
+  font-weight: 600;
+}
 
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-family: var(--text-font-family);
+}
+
+.contact-form input, .contact-form textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #e1e1e1;
+  border-radius: 4px;
+}
+
+.contact-form button {
+  background-color: var(--main--color);
+  color: var(--text-color);
+  padding: 10px 40px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: var(--text-font-family);
+}
+
+.contact-form button:hover {
+  background-color: #500c2f;
+}
+
+.map {
+  height: 500px; 
+  width: calc(100% - 50px); 
+  border: 2px solid #ccc; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  border-radius: 8px; 
+  margin: 20px ; 
+}
 @media (min-width:786px){
 .header .toggle-menu{
     display: none;
@@ -470,16 +558,22 @@ margin: 10px 25px;
 
 .login{
  margin-top: 35px;
- top: 20rem;
+ top: 15rem;
+ 
 }
 .login-container, #student-form, #teacher-form {
   width: 95%;
   padding: 15px;
+  align-items: center;
+
 }
 
 .btn {
   font-size: 14px;
   right: 6rem;
+}
+.Welcome-message{
+  text-align: justify;
 }
 }
 

@@ -23,7 +23,7 @@
       <a href="#Edu-pro">البرامج التعليمية</a>
       <a href="#Tstaff">الكادر التدريسي</a>
       <a href="#login">التسجيل</a>
-      <a href="#">اتصل بنا!</a>
+      <a href="#contactUs">اتصل بنا!</a>
       <a href="#">المطورون</a>
     </nav>
   </header>
@@ -198,14 +198,17 @@
             <i class="fa fa-lock icon"></i>
             <input type="password" id="password" placeholder="كلمة المرور">
         </div>
-        
+        <div class="btn-container">
         <button class="btn" onclick="login()">تسجيل الدخول</button>
-        
+         
         <div class="link">
             <a href="#login" onclick="showRegisterForm()">إنشاء حساب جديد</a>
         </div>
     </div>
+    </div>
 
+    
+       <div class="Create-an-account-container" style="display: none;">
     <div class="register-container" style="display: none;">
         <h2>إنشاء حساب جديد</h2>
         
@@ -275,14 +278,60 @@
               <input type="number" placeholder="سنوات الخبرة">
           </div>
         </div>
-        
+        <div class="btn-container">
         <button class="btn">إنشاء الحساب</button>
         <div class="link">
             <a href="#login" onclick="showLoginForm()">العودة إلى تسجيل الدخول</a>
         </div>
     </div>
+    </div>
+    </div>
+     </section>
+     <!--End Login-->
+     <!-------------------------------------->
+     <!--Contact us-->
+     <section class="contactUs" id="contactUs">
+        <h1>اتصل بنا</h1>
+    <p class="Welcome-message">نحن هنا للإجابة على جميع استفساراتكم. لا تترددوا في التواصل معنا عبر أي من وسائل الاتصال التالية.</p>
+
+    <div class="contact-info">
+        <h2>معلومات الاتصال</h2>
+        <p><strong>رقم الهاتف:</strong> +000 000 000 </p>
+        <p><strong>البريد الإلكتروني:</strong> example@gmail.com</p>
+        <p><strong>العنوان:</strong> مدينة الباب، سوريا</p>
+        <p><strong>أوقات العمل:</strong> من الأحد إلى الخميس، من الساعة 9:00 صباحاً إلى 5:00 مساءً</p>
+    </div>
+
+    <div class="contact-form">
+        <h2>أرسل لنا رسالة</h2>
+        <form action="/submit-form" method="POST">
+            <label for="name">الاسم الكامل:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">البريد الإلكتروني:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="subject">موضوع الرسالة:</label>
+            <input type="text" id="subject" name="subject" required>
+
+            <label for="message">الرسالة:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <div class="btn-container">
+            <button type="submit">إرسال</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="map" id="map">
+        <h2>موقعنا</h2>
+        
+    </div>
+
      </section>
   <script src="./script.js"></script>
   <script src="https://kit.fontawesome.com/b27ed5dc12.js" crossorigin="anonymous"></script>
+
+  <!--Add google maps-->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
 </body>
 </html>

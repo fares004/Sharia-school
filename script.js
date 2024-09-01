@@ -84,11 +84,13 @@ function login() {
 function showRegisterForm() {
     document.querySelector('.login-container').style.display = 'none';
     document.querySelector('.register-container').style.display = 'block';
+    document.querySelector('.Create-an-account-container').style.display = 'block';
 }
 
 function showLoginForm() {
     document.querySelector('.login-container').style.display = 'block';
     document.querySelector('.register-container').style.display = 'none';
+    document.querySelector('.Create-an-account-container').style.display = 'none';
 }
 
 function toggleForm() {
@@ -100,4 +102,20 @@ function toggleForm() {
         document.getElementById('student-form').style.display = 'none';
         document.getElementById('teacher-form').style.display = 'block';
     }
+}
+function initMap() {
+    // تحديد إحداثيات الموقع
+    const location = { lat: 34.052235, lng: -118.243683 }; // إحداثيات لوس أنجلوس على سبيل المثال
+
+    // إنشاء الخريطة وتحديد الموقع الذي ستظهر فيه
+    const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 10, // مستوى التكبير
+        center: location, // مركز الخريطة
+    });
+
+    // إضافة علامة للموقع
+    const marker = new google.maps.Marker({
+        position: location,
+        map: map,
+    });
 }
