@@ -5,15 +5,50 @@
     margin: 0;
     text-decoration: none;
     box-sizing: border-box;
+   
 }
 :root{
-    --main--color: #3489c2 ;
+    --main--color: #632443 ;
     --bg--color:#f5f5f5;
     --text-color:#fff;
     --text-font-family: "Cairo", sans-serif;
 }
 body{
   background-color: var(--bg--color);
+}
+
+main{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: start;
+  min-height: 100vh;
+}
+section{
+  flex: 1 1 100%;
+  margin: 10px;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid rgba(0, 0, 0 , 0.1);
+  min-height: 100vh;
+  scroll-margin-top: 5rem;
+}
+/* تخصيص شريط التمرير */
+::-webkit-scrollbar {
+  width: 12px; 
+}
+/* تخصيص لون مسار شريط التمرير */
+::-webkit-scrollbar-track {
+  background: var(--bg--color); 
+}
+/* تخصيص لون مقبض شريط التمرير */
+::-webkit-scrollbar-thumb {
+  background-color: var(--main--color);
+  border-radius: 6px; 
+  border: 3px solid var(--bg--color); 
+}
+/* تخصيص لون مقبض شريط التمرير عند التمرير عليه */
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--main--color);
 }
 
 h1, h2 {
@@ -33,34 +68,36 @@ h1, h2 {
   z-index: 100; 
 }
 
-.home form{
-  position: absolute;
-  left: 5rem;
+.form-container{
+  position: relative;
+  right:2rem;
   top: 0;
 }
 
-.home form label input{
+.form-container label input{
   height: 40px;
   padding: 10px;
   margin-left: 5px;
   border-radius: 4px;
+  width: 250px;
 }
-.home form label a{
+.form-container label a{
   background-color: var(--bg--color);
-  padding: 5px 15px;
+  padding: 0px 15px;
   color: var(--main--color);
   border-radius: 2px; 
-  transition: background-size 0.8s ease, color 0.8s ease;
+  transition: background-size 0.1s ease, color 0.1s ease;
   background-size: 0% 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-image: linear-gradient(90deg, var(--main--color) 0%, var(--main--color) 100%);
 }
 
-.home form label a:hover{
+form label a:hover{
   background-size: 100% 100%;
   color: var(--text-color);
 }
+
 
 /*Start with tutorial style*/
 /* General Styles */
@@ -130,12 +167,13 @@ strong{
   border-radius: 8px;
   border: 1px solid var(--section-border-color);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease , margin-top 0.3s ease ;
 }
 
 .level:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px 5px rgba(43, 16, 30, 0.2);
+  transform: translateY(-8px);
+  box-shadow: 0 6px 12px 5px 5px rgba(0, 0, 0, 0.1);
+  margin-top: 15px;
 }
 
 .level h2 {
@@ -156,8 +194,6 @@ strong{
 .teachers-container ,.contact-team {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  
 }
 
 .teacher-card ,.member-card{
@@ -168,16 +204,16 @@ strong{
   border-radius: 8px;
   width: 250px;
   padding: 10px;
-  box-shadow: 0 4px 6px rgba(43, 16, 29, 0.1);
+  box-shadow: 0 4px 6px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .teacher-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px 5px rgba(56, 20, 38, 0.2);
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px 5px rgba(0, 0, 0, 0.1);
 }
 
-.teacher-img {
+.teacher-img , .member-img {
   width: calc(100% - 10px);
   height: 200px;
   margin: 5px;
@@ -216,7 +252,7 @@ strong{
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(52, 208, 221, 0.1);
   width: 80%;
-  margin: 0 auto; /* Center the form horizontally */
+  margin: 0 auto; 
   right: 0;
 }
 
@@ -316,7 +352,7 @@ strong{
 /*Start Contact us*/
 .contactUs{
   position: relative;
-  top: 20rem;
+  top: 15rem;
   right: 0;
 }
 .contact-info, .contact-form, .map {
@@ -386,25 +422,19 @@ strong{
 .contact-form button:hover {
   background-color: #500c2f;
 }
-
-.map {
-  height: 500px; 
-  width: calc(100% - 50px); 
-  border: 2px solid #ccc; 
-  box-shadow: 0 4px 8px rgba(52, 208, 221 , 0.1); 
-  border-radius: 8px; 
-  margin: 20px ; 
-}
 /*start Development team*/
 .Dev-team{
   position: relative;
-  top: 25rem;
+  top: 15rem;
   right: 0;
-  align-items: center;
   justify-content: center;
 }
 .Dev-team h1{
 margin-bottom: 25px;
+justify-content: center;
+}
+.contact-team{
+  margin: 15px;
 }
 .member-card{
   max-width: 400px;
@@ -413,69 +443,33 @@ margin-bottom: 25px;
 .member-card h2{
   text-align: center;
   font-weight: 900;
-  
-  
+}
+.member-card p{
+  text-align: center;
 }
 .member-card:hover{
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px 4px rgba(52, 208, 221 , 0.4);
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px 4px rgb(177, 40, 108);
+}
+ /*Strat Footer*/
+ footer {
+  width: calc(100% - 15px);
+  background-color:var(--main--color); 
+  color: var(--text-color);
+  font-family: var(--text-font-family);
+  padding: 10px 0; 
+  text-align: center; 
+  margin: auto; 
+  
 }
 
-.f-container{
-  flex: 1 1 100%;
-  display: flex;
-  justify-content: center; 
-  align-items: center; 
-  height: 100vh; 
-  margin-bottom: 25px;
-}
-.f-container img{
-  height: 300px;
-  border-radius: 15px;
-}
-.fares{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 350px;
-
-}
-.social-media {
-  margin-top: 10px;
-}
-
-.social-media a {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 2.5rem; 
-  height: 2.5rem; 
-  background: transparent;
-  border: 0.2rem solid var(--main--color);
-  border-radius: 50%;
-  font-size: 1.5rem;
-  color: var(--main--color);
-  margin-right: 0.5rem;
-  transition: background 0.5s ease, color 0.5s ease;
-}
-
-.social-media a:hover {
-  background: var(--main--color);
-  color: var(--bg--color);
-  box-shadow: 0 0 1rem var(--main--color);
-}
-.me-container{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-top: 15rem;
-}
-.member-card{
-  flex:  1 1 30%;
-}
 @media (min-width:786px){
 .header .toggle-menu{
     display: none;
+  }
+  footer{
+    margin: auto;
+    margin-top: 15rem;
   }
 }
 
@@ -558,6 +552,13 @@ margin-bottom: 25px;
 
 
 @media (max-width:480px){
+main{
+  margin-bottom: 4rem;
+}
+.header .navbar a:nth-last-child(1){
+    margin-bottom: 15px;
+  }
+
   .home-content {
     padding: 20px;
     background-color: var(--bg--color);
@@ -585,16 +586,17 @@ margin-bottom: 25px;
     margin-bottom: 15px;
     text-align: justify;
   }
-.home form{
- width: 100%;
- left: 0;
+.form-container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
-.home form label{
-margin: 10px 25px;
+.form-container form{
+ width: 200px;
 }
 
 .home form label input {
-  width: 250px;
+  width: 200px;
 }
 .home form label a {
   padding: 5px 30px;
@@ -632,6 +634,7 @@ margin: 10px 25px;
   flex: 1 1 50%;
   width: 350px;
   margin: 15px;
+  margin-top: 25px;
 }
 
 .login{
@@ -653,30 +656,46 @@ margin: 10px 25px;
 .Welcome-message{
   text-align: center;
 }
-.contact-info h2 {
- text-align: center;
+.contact-info{
+  max-width: 100%;
 }
+.contact-info h2 {
+ text-align: right;
+}
+
 .contact-info p{
   text-align: right;
-  margin: 10px 0;
+  margin: 5px ;
+  font-size: 14px;
 }
 .Dev-team{
-  top: 28rem;
+  top: 21rem;
+}
+/*start footer*/
+footer{
+  position: relative;
+  justify-content: center;
+  right: 10px;
+  margin: auto;
+  margin-top: 20rem;
 }
 }
 
 
 @media (max-width:786px){
+.header .navbar a:nth-last-child(1){
+    margin-bottom: 15px;
+}
 .navbar {
     display: none;
-    transition: max-height 2s ease-in-out;
+    transition: max-height 1s ease-in-out;
     max-height: 0;
     overflow: hidden;
 }
 
 .home .home-content{
   position: relative;
-  top: 7rem;
+  top: 0;
   margin: 15px;
 }
 .home-content img{
@@ -686,7 +705,9 @@ margin: 10px 25px;
     align-items: center;
     box-shadow: 0 4px 6px rgba(52, 208, 221 , 0.1);
 }
-
+.home-content h1{
+  text-align: center;
+}
 .navbar.active {
     display: flex;
     max-height: 400px;
@@ -714,12 +735,13 @@ margin: 10px 25px;
   justify-content: center;
   align-items: start;
   position: absolute;
-  top: 100%;
+  top: calc(100% - 1px);
   right: 0;
   width: 100%;
   background-color: var(--main--color);
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+  
 }
 
 
@@ -728,23 +750,17 @@ margin: 10px 25px;
   margin: 1px 10px;
   width: calc(100% - 20px);
   font-size: 15px;
-}
 
-.header .navbar a:nth-last-child(2){
-  margin-bottom: 10px;
 }
-.home form{
+.form-container form{
   width: 100%;
   left: 0;
+  margin: 0 25px;
  }
- .home form label{
- margin: 10px 25px;
+ .form-container form label input {
+   width: 200px;
  }
- 
- .home form label input {
-   width: 221px;
- }
- .home form label a {
+ .form-container form label a {
    padding: 5px 25px;
    background-color: var(--main--color) !important;
    color: var(--text-color) !important;
@@ -761,7 +777,7 @@ margin: 10px 25px;
 }
 
 .fa-xmark {
-  transition: transform 0.8s ease;
+  transition: transform 0.8s ease; 
 }
 
  .rotate-in {
@@ -780,28 +796,21 @@ margin: 10px 25px;
   font-size: 0.9rem;
   padding-left: 15px;
 }
-.teacher-card {
-  flex: 1 1 35%;
-}
-.teachers-container{
+.teachers-container , .contact-team{
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
 
 }
-
-.teacher-card {
-  flex: 1 1 40%;
-  width: 350px;
-
+.teacher-card ,.member-card{
+  flex: 1 1 45%;
+  max-width: 350px;
 }
-.f-container{
-  flex: 1 1 100%;
-  display: flex;
-  justify-content: center; 
-  align-items: center; 
-  height: 100vh; 
-}
+ footer{
+  margin: auto;
+  margin-top: 18rem;
+} 
 } 
 
 
@@ -831,6 +840,15 @@ margin: 10px 25px;
     font-family: var(--text-font-family);
     transition: .8s ease-out;
   }
-
+.teachers-container , .contact-team{
+  display: flex;
+  flex-wrap: wrap;
 }
+  .teacher-card ,.member-card{
+    flex: 1 1 35%;
+    margin-left: auto;
+    max-width: 350px;
+  }
+}
+
 
