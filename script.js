@@ -4,22 +4,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const toggleMenu = document.querySelector('.toggle-menu');
     const iconBars = document.querySelector('.fa-bars');
     const iconXmark = document.querySelector('.fa-xmark');
-  
-    // إخفاء الـ navbar عند تحميل الصفحة
-    document.getElementById("navbar").style.display = "none";
+    
+    // خفاء الـ navbar عند تحميل الصفحة
     iconXmark.style.display = 'none';
     navbar.style.display = 'none';
   
     // وظيفة لتغيير حالة الـ navbar بناءً على حجم الشاشة
     function handleResize() {
         if (window.matchMedia("(max-width: 786px)").matches) {
-            // عرض أيقونة الهمبرجر وإخفاء أيقونة الإغلاق والـ navbar في الشاشات الصغيرة
+            // عرض أيقونة وإخفاء أيقونة الإغلاق والـ navbar في الشاشات الصغيرة
             navbar.classList.remove('active');
             iconBars.style.display = 'block';
             iconXmark.style.display = 'none';
             navbar.style.display = 'none'; 
         } else {
-            // عرض الـ navbar في الشاشات الكبيرة وإخفاء أيقونة الهمبرجر
+            // عرض الـ navbar في الشاشات الكبيرة وإخفاء أيقونة
             navbar.classList.add('active');
             iconBars.style.display = 'none';
             iconXmark.style.display = 'none';
@@ -36,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
         navbar.classList.toggle('active');
   
         if (navbar.classList.contains('active')) {
-            // إذا كانت الـ navbar نشطة، عرض أيقونة الإغلاق وإخفاء أيقونة الهمبرجر
+            // إذا كانت الـ navbar نشطة، عرض أيقونة الإغلاق وإخفاء أيقونة
             iconXmark.classList.add('rotate-in');
             iconBars.style.display = 'none';
             iconXmark.style.display = 'block';
@@ -46,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 iconXmark.classList.remove('rotate-in');
             }, 1000);
         } else {
-            // إذا كانت الـ navbar غير نشطة، إخفاء أيقونة الإغلاق وإظهار أيقونة الهمبرجر
+            // إذا كانت الـ navbar غير نشطة، إخفاء أيقونة الإغلاق وإظهار أيقونة 
             iconXmark.classList.add('rotate-in');
             
             setTimeout(() => {
@@ -58,7 +57,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
   });
-  
   // دالة تسجيل الدخول
   function login() {
       var role = document.querySelector('input[name="role"]:checked').value;

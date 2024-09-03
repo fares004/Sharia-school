@@ -68,6 +68,9 @@ h1, h2 {
   z-index: 100; 
 }
 
+#navbar{
+  display: none;
+}
 .form-container{
   position: relative;
   right:0rem;
@@ -185,7 +188,7 @@ strong{
   top: 8rem;
   right: 0;
 }
-.Tstaff , .Dev-team h1{
+.Tstaff  h1{
   margin: 0 0 20px;
   font-family: var(--text-font-family);
   font-weight: 800;
@@ -196,7 +199,7 @@ strong{
   flex-wrap: wrap;
 }
 
-.teacher-card ,.member-card{
+.teacher-card{
   flex: 1 1 30%;
   margin: 10px;
   background-color: var(--bg--color);
@@ -222,13 +225,13 @@ strong{
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.teacher-card , .member-card h2 {
+.teacher-card  h2 {
   color: var(--main--color);
   font-size: 1.2rem;
   margin-bottom: 10px;
 }
 
-.teacher-card , .member-card p {
+.teacher-card  p {
   color: #000;
   font-size: 14px;
   font-family: var(--text-font-family);
@@ -251,7 +254,7 @@ strong{
   background-color: var(--bg--color);
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(52, 208, 221, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   width: 80%;
   margin: 0 auto; 
   right: 0;
@@ -422,35 +425,7 @@ strong{
 .contact-form button:hover {
   background-color: #500c2f;
 }
-/*start Development team*/
-.Dev-team{
-  position: relative;
-  top: 15rem;
-  right: 0;
-  justify-content: center;
-}
-.Dev-team h1{
-margin-bottom: 25px;
-justify-content: center;
-}
-.contact-team{
-  margin: 15px;
-}
-.member-card{
-  max-width: 400px;
-  margin-left: 30px;
-}
-.member-card h2{
-  text-align: center;
-  font-weight: 900;
-}
-.member-card p{
-  text-align: center;
-}
-.member-card:hover{
-  transform: scale(1.05);
-  box-shadow: 0 6px 12px 4px rgb(177, 40, 108);
-}
+
  /*Strat Footer*/
  footer {
   width: calc(100% - 15px);
@@ -550,7 +525,7 @@ justify-content: center;
   margin-bottom: 0;
 }
 
-
+/*  Media  */
 @media (max-width:480px){
 main{
   margin-bottom: 4rem;
@@ -617,7 +592,7 @@ main{
 .Edu-pro .Edu-pro-content .level ul{
   font-size: 14px;
 }
-.Tstaff ,.Dev-team{
+.Tstaff {
   top: 15rem;
   margin-bottom: 20px;
 }
@@ -630,7 +605,7 @@ main{
 
 }
 
-.teacher-card ,.member-card {
+.teacher-card {
   flex: 1 1 50%;
   width: 350px;
   margin: 15px;
@@ -691,9 +666,7 @@ main{
   margin: 5px ;
   font-size: 14px;
 }
-.Dev-team{
-  top: 21rem;
-}
+
 /*start footer*/
 footer{
   position: relative;
@@ -704,7 +677,7 @@ footer{
 }
 }
 
-
+/*   Media  */
 @media (max-width:786px){
 .header .navbar a:nth-last-child(1){
     margin-bottom: 15px;
@@ -824,10 +797,9 @@ footer{
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-
 }
-.teacher-card ,.member-card{
-  flex: 1 1 45%;
+.teacher-card {
+  flex: 1 1 50%;
   max-width: 350px;
 }
  footer{
@@ -836,8 +808,8 @@ footer{
 } 
 } 
 
-
-@media (min-width:787px) and (max-width:1115px){
+/*  787 <  Media < 1024 */
+@media (min-width:787px) and (max-width:1024px){
   .header{
     position: fixed;
     top: 0;
@@ -867,7 +839,7 @@ footer{
   display: flex;
   flex-wrap: wrap;
 }
-  .teacher-card ,.member-card{
+  .teacher-card {
     flex: 1 1 35%;
     margin-left: auto;
     max-width: 350px;
