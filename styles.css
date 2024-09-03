@@ -100,10 +100,12 @@ form label a:hover{
   background-size: 100% 100%;
   color: var(--text-color);
 }
+/*start home */
+.home-content p, ul{
+  font-weight: 800;
+}
 
-
-/*Start with tutorial style*/
-/* General Styles */
+/*Start Educational programs*/
 .Edu-pro {
   position: relative;
   top: 5rem;
