@@ -247,6 +247,7 @@ strong{
 
 .login-container ,.Create-an-account-container, #student-form, #teacher-form {
   position: relative;
+  justify-content: center;
   background-color: var(--bg--color);
   padding: 20px;
   border-radius: 8px;
@@ -292,7 +293,6 @@ strong{
 
 .role-select {
   display: flex;
-  flex-direction: column;
   margin-bottom: 20px;
 }
 .role-select label {
@@ -649,10 +649,33 @@ main{
 
 }
 
+.login-container {
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.input-container {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .btn {
+  margin-top: 10px;
   font-size: 14px;
   right: 6rem;
 }
+
 .Welcome-message{
   text-align: center;
 }
