@@ -70,7 +70,7 @@ h1, h2 {
 
 .form-container{
   position: relative;
-  right:2rem;
+  right:0rem;
   top: 0;
 }
 
@@ -555,7 +555,7 @@ justify-content: center;
 main{
   margin-bottom: 4rem;
 }
-.header .navbar a:nth-last-child(1){
+.header .navbar a:nth-last-child(2){
     margin-bottom: 15px;
   }
 
@@ -675,7 +675,7 @@ main{
 footer{
   position: relative;
   justify-content: center;
-  right: 10px;
+  right: 0;
   margin: auto;
   margin-top: 20rem;
 }
